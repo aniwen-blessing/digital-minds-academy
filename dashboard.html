@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Dashboard – Digital Minds</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>My Learning Dashboard</h1>
+    <p>Welcome! You're enrolled in: <strong>Web Development Basics</strong></p>
+    
+    <div id="lessonContainer" class="lesson">
+      <h2>Loading your first lesson...</h2>
+    </div>
+
+    <button onclick="logout()" style="margin-top:20px; background:#e74c3c;">Logout</button>
+  </div>
+
+  <script>
+    // Fetch Lesson 1
+    fetch('/api/lessons/web-dev-basics')
+      .then(res => res.json())
+      .then(lessons => {
+        const lesson = lessons[0]; // First lesson
+        document.getElementById('lessonContainer').innerHTML = `
+          <h2>${lesson.title}</h2>
+          <p>${lesson.content}</p>
+          <br>
+          <em>Next: ${lessons[1] ? lessons[1].title : 'Complete this lesson to unlock more!'}</em>
+        `;
+      })
+      .catch(err => {
+        document.getElementById('lessonContainer').innerHTML = '<p>Failed to load lesson. Please log in again.</p>';
+      });
+
+    function logout() {
+      localStorage.removeItem('token');
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

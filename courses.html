@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Courses – Digital Minds Academy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <div class="logo"><h1>Digital Minds Academy</h1></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="success-stories.html">Success Stories</a></li>
+          <li><a href="register.html">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <h2 class="section-title">Our Courses</h2>
+    <div class="content-grid">
+      <div class="card">
+        <h3>Web Development Fundamentals</h3>
+        <p>HTML, CSS, JavaScript, Git & GitHub. Perfect for beginners in Nigeria and across Africa.</p>
+      </div>
+      <div class="card">
+        <h3>Python Programming</h3>
+        <p>Learn problem-solving, automation, and beginner algorithms. Great for students and career switchers.</p>
+      </div>
+      <div class="card">
+        <h3>Digital Mind Crews</h3>
+        <p>Collaborative coding clubs with peer learning and weekly mentorship sessions.</p>
+      </div>
+      <div class="card">
+        <h3>Project-Based Learning</h3>
+        <p>Build real apps from day one — portfolio-ready projects included.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About Digital Minds</h3>
+          <p>Empowering young tech talents in Benue and across Nigeria through coding, mentorship, and innovation.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <a href="mailto:blessinganiwen3@gmail.com">blessinganiwen3@gmail.com</a>
+          <a href="tel:+2347069946295">+234 706 994 6295</a>
+          <a href="tel:+2348153193314">+234 815 319 3314</a>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="success-stories.html">Success Stories</a>
+          <a href="register.html">Register</a>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://wa.me/2347069946295" title="WhatsApp" target="_blank">W</a>
+            <a href="#" title="Instagram" target="_blank">I</a>
+            <a href="#" title="Twitter/X" target="_blank">X</a>
+            <a href="#" title="GitHub" target="_blank">G</a>
+          </div>
+          <p style="margin-top: 10px; font-size: 0.9rem;">Stay updated with our journey!</p>
+        </div>
+      </div>
+      <div style="text-align: center; padding-top: 1.5rem; border-top: 1px solid #34495e; margin-top: 1.5rem;">
+        <p>&copy; 2026 Digital Minds Coding Academy. Founded by Aniwen Blessing. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop">↑</a>
+
+  <script>
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
